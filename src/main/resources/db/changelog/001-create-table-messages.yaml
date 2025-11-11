@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-table
+      author: Pavel
+      changes:
+        - createTable:
+            tableName: messages
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: msg_id
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: timestamp
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: uri
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: method
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
